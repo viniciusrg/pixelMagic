@@ -118,7 +118,7 @@ export default function Section3() {
                             </div>
                         </div>
                         <div className='image'>
-                            <img src={bola} alt='Cristal' width='350' height='353' />
+                            <img src={bola} alt='Cristal' width='350' height='353' loading='lazy' />
                         </div>
                     </Div>
                 </Container>

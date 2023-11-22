@@ -147,7 +147,7 @@ export default function Section2() {
             <Container>
                 <Div>
                     <div className='image'>
-                        <img src={unifenas} alt='Case UNIFENAS' width={610} height={542} />
+                        <img src={unifenas} alt='Case UNIFENAS' width='610' height='542' loading='lazy' />
                     </div>
                     <div className='content'>
                         <h3>UNIFENAS</h3>
@@ -161,7 +161,7 @@ export default function Section2() {
                             O modelo segue sendo utilizado e atualizado anualmente.
                         </p>
                         <div className='icon-link'>
-                            <a href='https://medicina.unifenas.br' aria-label='Acessar site oficial' target='_balank'>
+                            <a href='https://medicina.unifenas.br' aria-label='Acessar medicina.unifenas.br' target='_balank'>
                                 <BsLink45Deg />
                                 medicina.unifenas.br
                             </a>
@@ -173,7 +173,7 @@ export default function Section2() {
 
                 <Div>
                     <div className='image'>
-                        <img src={oticazafra} alt='Case Óticas Zafra' width={610} height={542} />
+                        <img src={oticazafra} alt='Case Óticas Zafra' width='610' height='542' loading='lazy' />
                     </div>
                     <div className='content'>
                         <h3>Óticas Zafra</h3>
@@ -186,7 +186,7 @@ export default function Section2() {
                             E-commerce totalmente personalizado, com funcionalidades de cupons de desconto, promoções, newsletter e muito mais! Desenvolvido com as tecnologias WordPress e WooCommerce.
                         </p>
                         <div className='icon-link'>
-                            <a href='https://oticaszafra.com.br/' aria-label='Acessar site oficial' target='_balank'>
+                            <a href='https://oticaszafra.com.br/' aria-label='Acessar oticaszafra.com.br' target='_balank'>
                                 <BsLink45Deg />
                                 oticaszafra.com.br
                             </a>
@@ -198,7 +198,7 @@ export default function Section2() {
 
                 <Div>
                     <div className='image'>
-                        <img src={lexprime} alt='Case UNIFENAS' width={610} height={542} />
+                        <img src={lexprime} alt='Case UNIFENAS' width='610' height='542' loading='lazy' />
                     </div>
                     <div className='content'>
                         <h3>Lex Prime</h3>
@@ -211,7 +211,7 @@ export default function Section2() {
                             O site Lex Prime é um portal de notícias voltado para o mundo jurídico. O site conta com funcionalidades de blog, posts e newsletter. A prioridade do projeto foi um ótimo SEO e acessibilidade.
                         </p>
                         <div className='icon-link'>
-                            <a href='https://lexprime.com.br/' aria-label='Acessar site oficial' target='_balank'>
+                            <a href='https://lexprime.com.br/' aria-label='Acessar lexprime.com.br' target='_balank'>
                                 <BsLink45Deg />
                                 lexprime.com.br/
                             </a>
