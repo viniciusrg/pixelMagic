@@ -146,8 +146,11 @@ export default function Section4() {
     });
 
     const handleChange = (e) => {
-        setFormData({ ...formData, [e.target.name]: e.target.value });
-        console.log(formData.contact_form)
+        if (e.target.name === "phone") {
+            const value = phoneMask(e.target.value);
+            setFormData({ ...formData, [e.target.name]: value });
+        } else
+            setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
     const handleSubmit = (e) => {
@@ -162,9 +165,26 @@ export default function Section4() {
                 setErrorMessage("Algo deu errado ao enviar sua mensagem. Tente novamente!");
                 setSuccessMessage('');
             })
-            .finally(()=>{
+            .finally(() => {
                 setLoading(false);
             });
+    }
+
+    function phoneMask(v) {
+
+        let r = v.replace(/\D/g, "");
+        r = r.replace(/^0/, "");
+
+        if (r.length > 11) {
+            r = r.replace(/^(\d\d)(\d{5})(\d{4}).*/, "($1) $2-$3");
+        } else if (r.length > 7) {
+            r = r.replace(/^(\d\d)(\d{5})(\d{0,4}).*/, "($1) $2-$3");
+        } else if (r.length > 2) {
+            r = r.replace(/^(\d\d)(\d{0,5})/, "($1) $2");
+        } else if (v.trim() !== "") {
+            r = r.replace(/^(\d*)/, "($1");
+        }
+        return r;
     }
 
     return (
@@ -204,11 +224,11 @@ export default function Section4() {
                             <TextArea placeholder='Sua mensagem' rows='4' name='message' value={formData.message} onChange={handleChange} />
                             <div className='button-area'>
                                 <SubmitButton>
-                                    { loading ? 'Enviando...' : 'Enviar' }
+                                    {loading ? 'Enviando...' : 'Enviar'}
                                 </SubmitButton>
                             </div>
-                            <p style={{color: 'var(--color-success)', fontSize: '12px', marginTop: '16px'}}>{successMessage}</p>
-                            <p style={{color: 'var(--color-error)', fontSize: '12px', marginTop: '16px'}}>{errorMessage}</p>
+                            <p style={{ color: 'var(--color-success)', fontSize: '12px', marginTop: '16px' }}>{successMessage}</p>
+                            <p style={{ color: 'var(--color-error)', fontSize: '12px', marginTop: '16px' }}>{errorMessage}</p>
                         </form>
                     </div>
                 </DivGrid>

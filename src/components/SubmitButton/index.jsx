@@ -8,6 +8,7 @@ const Button = styled.button`
     padding: 16px 48px;
     color: var(--color-text);
     font-weight: bold;
+    cursor: pointer;
 `
 
 export default function SubmitButton({children}) {
