@@ -20,7 +20,15 @@ const Div = styled.nav`
     @media (max-width: 425px) {
         ul {
             flex-wrap: wrap;
-            gap: 16px;
+            gap: 32px;
+        }
+
+        a {
+            display: none;
+        }
+
+        a:last-child {
+            display: block;
         }
     }
 
@@ -28,21 +36,28 @@ const Div = styled.nav`
         font-weight: bold;
     }
 
-    li:last-child{
-        padding: 4px 16px;
+    a:last-child{
+        padding: 24px 32px;
         text-align: center;
-        border-bottom: 3px solid var(--color-roxo);
+        /* border-bottom: 3px solid var(--color-roxo); */
+        background-color: var(--color-roxo);
+        border-radius: 8px;
+        transition: .5s;
+    }
+
+    a:last-child:hover{
+        transform: scale(1.05);
     }
 
     @media (max-width: 425px) {
-        li:last-child{
+        a:last-child{
             width: 100%;
         }
     }
 
     @media (max-width: 425px) {
         li{
-            font-size: 12px;
+            font-size: 16px;
         }
     }
 `
@@ -52,10 +67,10 @@ export default function Menu() {
         <Container>
             <Div>
                 <ul>
-                    <li><a href='#cases-de-sucesso' aria-label='Cases de sucesso'>Cases de sucesso</a></li>
-                    <li><a href='#como-trabalhamos' aria-label='Como trabalhamos'>Como trabalhamos</a></li>
-                    <li><a href='#precisa-de-ajuda' aria-label='Precisa de ajuda?'>Precisa de ajuda?</a></li>
-                    <li><a href='#comecar-projeto' aria-label='Começar projeto'>Começar projeto</a></li>
+                    <a href='#cases-de-sucesso' aria-label='Cases de sucesso'><li>Cases de sucesso</li></a>
+                    <a href='#como-trabalhamos' aria-label='Como trabalhamos'><li>Como trabalhamos</li></a>
+                    <a href='#precisa-de-ajuda' aria-label='Precisa de ajuda?'><li>Precisa de ajuda?</li></a>
+                    <a href='#comecar-projeto' aria-label='Orçamento GRÁTIS'><li>Orçamento GRATUITO</li></a>
                 </ul>
             </Div>
         </Container>

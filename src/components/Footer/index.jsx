@@ -37,7 +37,7 @@ export default function Footer() {
                         </a>
                     </li>
                     <li>
-                        <a href='https://wa.me/5535984323737' aria-label='Link para o Instagram da PixelMagic' target='_blank' rel='noreferrer'>
+                        <a href='https://wa.me/5535984773124' aria-label='Link para o Instagram da PixelMagic' target='_blank' rel='noreferrer'>
                             <BsWhatsapp />
                         </a>
                     </li>

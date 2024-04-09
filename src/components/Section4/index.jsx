@@ -78,6 +78,7 @@ const DivGrid = styled.div`
         .raio{
             margin-top: 0px;
             padding: 32px 0px;
+            display: none;
         }
     }
 
@@ -197,7 +198,7 @@ export default function Section4() {
                         <p>Envie uma mensagem para nosso WhatsApp</p>
                         <p>Ou se preferir, preencha o formulário ao lado que nós entraremos em contato.</p>
                         <div className='icon-arrow'>
-                            <a href='https://wa.me/5535984323737' aria-label='Chamar no WhatsApp' target='_blank' rel='noreferrer'><BsWhatsapp /></a>
+                            <a href='https://wa.me/5535984773124' aria-label='Chamar no WhatsApp' target='_blank' rel='noreferrer'><BsWhatsapp /></a>
                             <img src={arrow} alt='Ícone de flecha' width='398' height='32' />
                         </div>
                         <div className='raio'>

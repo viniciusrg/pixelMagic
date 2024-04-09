@@ -13,6 +13,10 @@ const ContainerDiv = styled.div`
         width: 100%;
         padding: 0px 32px;
     }
+
+    @media (max-width: 425px) {
+        padding: 16px;
+    }
 `
 
 export default function Container({ children }) {
