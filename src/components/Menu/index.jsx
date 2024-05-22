@@ -40,7 +40,7 @@ const Div = styled.nav`
         padding: 24px 32px;
         text-align: center;
         /* border-bottom: 3px solid var(--color-roxo); */
-        background-color: var(--color-roxo);
+        background-color: var(--color-rosa);
         border-radius: 8px;
         transition: .5s;
     }

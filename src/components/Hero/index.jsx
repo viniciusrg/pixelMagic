@@ -109,9 +109,9 @@ export default function Hero() {
             <Div>
                 <div>
                     <h1>Bem vindo à PixelMagic ⚡️</h1>
-                    <h2>Criação de <span className='roxo'>SITES!</span></h2>
-                    <h2>Anúncios no <span className='laranja'>INSTAGRAM!</span></h2>
-                    <h2> <span className='rosa'>VISIBILIDADE + VENDAS</span></h2>
+                    <h2>Criação de <span className=''>SITES!</span></h2>
+                    <h2>Anúncios no <span className=''>INSTAGRAM!</span></h2>
+                    <h2> <span className='rosa'>VISIBILIDADE & VENDAS</span></h2>
                     <SocialProof>
                         <div className='stars'>
                             <BsStarFill />

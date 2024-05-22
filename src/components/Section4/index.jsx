@@ -123,6 +123,23 @@ const DivGrid = styled.div`
         padding-left: 16px;
     }
 
+    .select p {
+        font-weight: 400;
+        font-size: 16px;
+        padding-left: 16px;
+    }
+
+    .select select {
+        margin-left: 16px;
+        background-color: transparent;
+        color: var(--color-text);
+        border: 2px solid var(--color-rosa);
+        border-radius: 8px;
+        padding: 4px 24px;
+        padding-left: 8px;
+        text-align: left;
+    }
+
     .button-area{
         width: 100%;
         display: flex;
@@ -142,7 +159,8 @@ export default function Section4() {
         name: '',
         email: '',
         phone: '',
-        contact_form: 0,
+        contact_form: '',
+        budget: '',
         message: ''
     });
 
@@ -214,13 +232,23 @@ export default function Section4() {
                             <div className='radio'>
                                 <p>Por onde você prefere conversar? *</p>
                                 <label>
-                                    <input type='radio' name='contact_form' value='0' onChange={handleChange} checked={formData.contact_form === '0'} />
+                                    <input type='radio' name='contact_form' value='WhatsApp' onChange={handleChange} checked={formData.contact_form === '0'} />
                                     Prefiro WhatsApp
                                 </label>
                                 <label>
-                                    <input type='radio' name='contact_form' value='1' onChange={handleChange} checked={formData.contact_form === '1'} />
+                                    <input type='radio' name='contact_form' value='E-mail' onChange={handleChange} checked={formData.contact_form === '1'} />
                                     Prefiro E-mail
                                 </label>
+                            </div>
+                            <div className='select'>
+                                <p>Valor disponível para investimento? *</p>
+                                <select name='budget' value={formData.budget} onChange={handleChange}>
+                                    <option value="R$800,00-R$1250,00">R$800,00 - R$1250,00</option>
+                                    <option value="R$1250,00-R$2500,00">R$1250,00 - R$2500,00</option>
+                                    <option value="R$2500,00-R$5000,00">R$2500,00 - R$5000,00</option>
+                                    <option value="R$5000,00-R$15000,00">R$5000,00 - R$15000,00</option>
+                                    <option value="+15000">+R$15000,00</option>
+                                </select>
                             </div>
                             <TextArea placeholder='Sua mensagem' rows='4' name='message' value={formData.message} onChange={handleChange} />
                             <div className='button-area'>
